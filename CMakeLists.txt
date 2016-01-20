@@ -82,14 +82,14 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(trs_masterMbed src/masterMbed.cpp)
+add_executable(trs_masterBoard src/masterBoard.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(trs_serial_node trs_serial_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(trs_masterMbed ${catkin_LIBRARIES})
+target_link_libraries(trs_masterBoard ${catkin_LIBRARIES})
 
 #############
 ## Install ##
