@@ -10,7 +10,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   trs_msgs
-  tf
   trs_control
 )
 
@@ -60,7 +59,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
  INCLUDE_DIRS include
 #  LIBRARIES trs_serial
- CATKIN_DEPENDS cereal_port roscpp std_msgs trs_msgs tf trs_control
+ CATKIN_DEPENDS cereal_port roscpp std_msgs trs_msgs trs_control
 #  DEPENDS system_lib
  DEPENDS Eigen
 )
@@ -76,7 +75,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   trs_control/include
 )
-include_directories(/usr/include/eigen3)
 
 ## Declare a cpp library
 # add_library(trs_serial
@@ -85,27 +83,13 @@ include_directories(/usr/include/eigen3)
 
 ## Declare a cpp executable
 add_executable(trs_masterMbed src/masterMbed.cpp)
-add_executable(trs_arduino src/arduino.cpp)
-add_executable(trs_arduinoPixy src/arduinoPixy.cpp)
-#add_executable(trs_adc src/adc.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(trs_serial_node trs_serial_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(trs_masterMbed
-  ${catkin_LIBRARIES}
-)
-
-target_link_libraries(trs_arduino
-  ${catkin_LIBRARIES}
-  ${Eigen_INCLUDE_DIRS}
-)
-
-target_link_libraries(trs_arduinoPixy
-  ${catkin_LIBRARIES}
-)
+target_link_libraries(trs_masterMbed ${catkin_LIBRARIES})
 
 #############
 ## Install ##

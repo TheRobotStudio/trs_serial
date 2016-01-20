@@ -2,7 +2,7 @@
 <package>
   <name>trs_serial</name>
   <version>1.0.0</version>
-  <description>The trs_serial package is the communication interface between the robot and ROS</description>
+  <description>The trs_serial package is the communication interface between the master board of the robot and ROS</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <maintainer email="cyril.jourdan@therobotstudio.com">Cyril Jourdan</maintainer>
@@ -42,13 +42,11 @@
   <build_depend>cereal_port</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>trs_msgs</build_depend>
-  <build_depend>tf</build_depend>
   <build_depend>trs_control</build_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>cereal_port</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>trs_msgs</run_depend>
-  <run_depend>tf</run_depend>
   <run_depend>trs_control</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->

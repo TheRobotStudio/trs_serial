@@ -1,0 +1,5 @@
+<launch>
+  <node name="trs_masterBoard_node" pkg="trs_serial" type="trs_masterBoard" output="screen" respawn="true">
+    <param name="usb_device" type="string" value="/dev/ttyUSB0" />
+  </node>
+</launch>
